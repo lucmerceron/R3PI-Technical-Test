@@ -42,9 +42,13 @@
 
 .grocery-shop-item-price {
   position: relative;
-  font-size: 4rem;
+  font-size: 2.5rem;
   list-height: 3.7rem;
   flex: 1;
+}
+.grocery-shop-item-cts {
+  font-size: 2rem;
+  margin-left: 2px;
 }
 .grocery-shop-item-reduction {
   z-index: -1;
@@ -59,10 +63,6 @@
   border-radius: 4px;
   transform: translate(-10%, 90%);
   box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
-}
-.grocery-shop-item-cts {
-  font-size: 2rem;
-  margin-left: 4px;
 }
 
 .grocery-shop-item-actions {

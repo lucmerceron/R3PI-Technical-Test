@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import transformTotal from '../../../utils/transformTotal'
+
 import './GroceryItem.css'
 
 const GroceryItem = ({ item, quantity, addItem, removeItem }) => (
@@ -9,7 +11,7 @@ const GroceryItem = ({ item, quantity, addItem, removeItem }) => (
       <div className="grocery-shop-item-picture" style={{ backgroundImage: `url('${item.picture}')` }} />
       <div className="grocery-shop-item-left-bottom">
         <div className="grocery-shop-item-price">
-          {item.price}
+          {transformTotal(item.price)}
           <div className="grocery-shop-item-cts">CTS</div>
         </div>
         <div className="grocery-shop-item-actions">

@@ -35,7 +35,7 @@ describe('Receipt component', () => {
       const itemTotal = item.reductionFormula ? item.reductionFormula(itemQty, item.price) : itemQty * item.price
       totalPrice += itemTotal
       expect(domItem.find('.grocery-shop-receipt-item-name').text()).toEqual(item.name)
-      expect(domItem.find('.grocery-shop-receipt-item-price').text()).toEqual(item.price.toString())
+      expect(domItem.find('.grocery-shop-receipt-item-price').text()).toEqual(transformTotal(item.price).toString())
       expect(domItem.find('.grocery-shop-receipt-item-quantity').text()).toEqual(`x ${itemQty.toString()}`)
       expect(domItem.find('.grocery-shop-receipt-item-total').text()).toEqual(transformTotal(itemTotal).toString())
       domItem.find('.grocery-shop-receipt-item-remove').simulate('click')

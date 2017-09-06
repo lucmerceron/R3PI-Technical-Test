@@ -37,7 +37,7 @@ class BottomContainer extends React.Component {
         </div>
         <div className="grocery-shop-bottom-bar-visible-on">
           <div className="grocery-shop-bottom-bar-top">
-            <span>grocery</span>
+            <span>grocery basket</span>
             <div
               className="grocery-shop-bottom-bar-close material-icons"
               onClick={(event) => {

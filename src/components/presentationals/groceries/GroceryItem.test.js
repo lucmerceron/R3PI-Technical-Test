@@ -2,6 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import groceryItems from '../../../constants/groceryItems'
+import transformTotal from '../../../utils/transformTotal'
 import GroceryItem from './GroceryItem'
 
 describe('GroceryItem component', () => {
@@ -25,7 +26,7 @@ describe('GroceryItem component', () => {
     expect(GroceryItemWrapper.find('.grocery-shop-item-name').text().toLowerCase()).toEqual(props.item.name)
   })
   it('should display the item price', () => {
-    expect(GroceryItemWrapper.find('.grocery-shop-item-price').text()).toContain(props.item.price)
+    expect(GroceryItemWrapper.find('.grocery-shop-item-price').text()).toContain(transformTotal(props.item.price))
   })
   it('should display the item quantity', () => {
     expect(GroceryItemWrapper.find('.grocery-shop-item-quantity').text()).toEqual(props.quantity.toString())
