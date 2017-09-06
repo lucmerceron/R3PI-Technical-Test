@@ -90,9 +90,9 @@
 
 .grocery-shop-item-name {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: right;
-  color: rgba(234,91,1, 1);
+  color: rgba(234,91,1, 0.7);
   border-bottom: 2px dotted #bdbdbd;
 }
 .grocery-shop-item-stats-weight {
