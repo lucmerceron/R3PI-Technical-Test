@@ -1,0 +1,56 @@
+.grocery-shop-top-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+  z-index: 1;
+}
+.grocery-shop-top-bar-left {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.grocery-shop-top-bar-logo {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  bottom: -18%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border: 3px solid #dbdbdb;
+  border-radius: 50%;
+}
+
+.grocery-shop-top-bar-title {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 5;
+  justify-content: flex-end;
+  padding-left: 16px;
+}
+
+.grocery-shop-top-bar-title-welcome {
+  flex: 0 0 40%;
+  font-size: 2rem;
+}
+
+.grocery-shop-top-bar-title-name {
+  display: inline-block;
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+.grocery-shop-top-bar-title-info {
+  flex: 0 0 35%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(53, 59, 63, 0.7);
+}
