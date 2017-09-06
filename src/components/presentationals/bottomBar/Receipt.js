@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './Receipt.css'
+import transformTotal from '../../../utils/transformTotal'
 
-const transformTotal = total => Number(total / 100).toLocaleString('es-ES', { minimumFractionDigits: 2 })
+import './Receipt.css'
 
 const Receipt = ({ items, cart, removeItems }) => {
   const uniqItemId = [...new Set(cart)]
