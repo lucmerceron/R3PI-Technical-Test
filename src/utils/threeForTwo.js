@@ -1,4 +1,4 @@
-import memoize from 'mem'
+import memoize from 'memoizee'
 
 const threeForTwo = (qty, price) => (qty - Math.floor(qty / 3)) * price
 
