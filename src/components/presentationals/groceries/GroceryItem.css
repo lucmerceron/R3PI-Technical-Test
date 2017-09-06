@@ -16,7 +16,7 @@
 
 .grocery-shop-item-left {
   position: relative;
-  flex: 3;
+  flex: 5;
   display: flex;
   padding-left: 6%;
   flex-flow: row wrap;
@@ -48,7 +48,6 @@
 }
 .grocery-shop-item-cts {
   font-size: 2rem;
-  margin-left: 2px;
 }
 .grocery-shop-item-reduction {
   z-index: -1;
@@ -82,8 +81,8 @@
 }
 
 .grocery-shop-item-right {
-  flex: 2;
-  padding-left: 4%;
+  flex: 4;
+  padding-left: 3%;
   padding-right: 2%;
   margin-top: 4%;
 }
@@ -102,9 +101,9 @@
 }
 .grocery-shop-item-stats {
   color: #bdbdbd;
-  padding-left: 12px;
+  padding-left: 10px;
   padding-top: 12px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .grocery-shop-item-stat {
