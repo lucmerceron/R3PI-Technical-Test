@@ -1,0 +1,55 @@
+.grocery-shop-receipt {
+  flex: 0 0 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  margin-top: 46px;
+}
+
+.grocery-shop-receipt-item {
+  list-style: none;
+  flex: 0 0 100%;
+  display: flex;
+  flex-flow: row wrap;
+  height: 60px;
+  font-size: 1.2rem;
+}
+
+.grocery-shop-receipt-item-name {
+  text-transform: capitalize;
+  flex: 2;
+}
+
+.grocery-shop-receipt-item-price {
+  flex: 1;
+
+}
+
+.grocery-shop-receipt-item-quantity {
+  flex: 1;
+
+}
+.grocery-shop-receipt-item-total {
+  flex: 1;
+  text-align: right;
+  font-weight: 600;
+}
+
+
+.grocery-shop-receipt-item-remove {
+  flex: 1;
+  cursor: pointer;
+  color: rgba(1, 106, 234, 0.5);
+}
+
+.grocery-shop-receipt-total-price {
+  font-size: 1.5rem;
+  flex: 1 1 auto;
+  text-align: right;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.grocery-shop-receipt-total-price > span {
+  color: rgba(234,91,1, 0.8);
+}

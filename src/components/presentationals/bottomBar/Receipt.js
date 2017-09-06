@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import './Receipt.css'
 
+const transformTotal = total => Number(total / 100).toLocaleString('es-ES', { minimumFractionDigits: 2 })
+
 const Receipt = ({ items, cart, removeItems }) => {
   const uniqItemId = [...new Set(cart)]
   let totalPrice = 0
@@ -22,16 +24,19 @@ const Receipt = ({ items, cart, removeItems }) => {
 
         return (
           <li key={itemId} className="grocery-shop-receipt-item">
+            <div
+              className="grocery-shop-receipt-item-remove material-icons"
+              onClick={() => removeItems(itemId)}
+            >&#xE92B;</div>
             <div className="grocery-shop-receipt-item-name">{item.name}</div>
             <div className="grocery-shop-receipt-item-price">{item.price}</div>
-            <div className="grocery-shop-receipt-item-quantity">{itemQty}</div>
-            <div className="grocery-shop-receipt-item-total">{itemTotal}</div>
-            <div className="grocery-shop-receipt-item-remove" onClick={() => removeItems(itemId)} />
+            <div className="grocery-shop-receipt-item-quantity">x {itemQty}</div>
+            <div className="grocery-shop-receipt-item-total">{transformTotal(itemTotal)}</div>
           </li>
         )
       })}
-      <div className="grocery-shop-receipt-total">
-        {totalPrice}
+      <div className="grocery-shop-receipt-total-price">
+        total : <span>{transformTotal(totalPrice)}</span>
       </div>
     </ul>
   )

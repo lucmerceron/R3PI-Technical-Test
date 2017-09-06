@@ -2,6 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import groceryItems from '../../../constants/groceryItems'
+import transformTotal from '../../../utils/transformTotal'
 import Receipt from './Receipt'
 
 describe('Receipt component', () => {
@@ -35,11 +36,12 @@ describe('Receipt component', () => {
       totalPrice += itemTotal
       expect(domItem.find('.grocery-shop-receipt-item-name').text()).toEqual(item.name)
       expect(domItem.find('.grocery-shop-receipt-item-price').text()).toEqual(item.price.toString())
-      expect(domItem.find('.grocery-shop-receipt-item-quantity').text()).toEqual(itemQty.toString())
-      expect(domItem.find('.grocery-shop-receipt-item-total').text()).toEqual(itemTotal.toString())
+      expect(domItem.find('.grocery-shop-receipt-item-quantity').text()).toEqual(`x ${itemQty.toString()}`)
+      expect(domItem.find('.grocery-shop-receipt-item-total').text()).toEqual(transformTotal(itemTotal).toString())
       domItem.find('.grocery-shop-receipt-item-remove').simulate('click')
       expect(props.removeItems).toBeCalled()
     })
-    expect(ReceiptWrapper.find('.grocery-shop-receipt-total').text()).toEqual(totalPrice.toString())
+    expect(ReceiptWrapper.find('.grocery-shop-receipt-total-price').text())
+      .toEqual(`total : ${transformTotal(totalPrice).toString()}`)
   })
 })
