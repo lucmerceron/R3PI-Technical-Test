@@ -24,12 +24,16 @@ describe('GroceryItem component', () => {
   it('should display the item name', () => {
     expect(GroceryItemWrapper.find('.grocery-shop-item-name').text().toLowerCase()).toEqual(props.item.name)
   })
+  it('should display the item price', () => {
+    expect(GroceryItemWrapper.find('.grocery-shop-item-price').text()).toContain(props.item.price)
+  })
   it('should display the item quantity', () => {
-    expect(GroceryItemWrapper.find('.grocery-shop-item-quantity').text()).toEqual(props.item.quantity)
+    expect(GroceryItemWrapper.find('.grocery-shop-item-quantity').text()).toEqual(props.quantity.toString())
   })
   it('should display every statistics', () => {
-    props.item.stats.forEach(stat => {
+    Object.keys(props.item.stats).forEach(stat => {
       expect(GroceryItemWrapper.find('.grocery-shop-item-stats').html()).toContain(stat)
+      expect(GroceryItemWrapper.find('.grocery-shop-item-stats').html()).toContain(props.item.stats[stat])
     })
   })
   it('should trigger add item callback on click', () => {
