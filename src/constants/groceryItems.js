@@ -31,7 +31,8 @@ export default [
     id: 3,
     name: 'banana',
     price: 15,
-    picture: `https://images.pexels.com/photos/39566/banana-tropical-fruit-yellow-healthy-39566.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb`,
+    picture: 'https://images.pexels.com/photos/39566/banana-tropical-fruit-yellow-healthy-39566.jpeg'
+      + '?w=1260&h=750&auto=compress&cs=tinysrgb',
     stats: {
       calories: 82,
       lipids: 0.3,
