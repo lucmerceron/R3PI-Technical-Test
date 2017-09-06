@@ -18,8 +18,7 @@ export default [
     id: 2,
     name: 'orange',
     price: 30,
-    picture: `https://images.pexels.com/photos/39566/banana-tropical-
-    fruit-yellow-healthy-39566.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb`,
+    picture: 'https://images.pexels.com/photos/65923/orange-food-juicy-fruit-65923.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb',
     stats: {
       calories: 47,
       lipids: 0.1,
@@ -32,7 +31,7 @@ export default [
     id: 3,
     name: 'banana',
     price: 15,
-    picture: 'https://images.pexels.com/photos/65923/orange-food-juicy-fruit-65923.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb',
+    picture: `https://images.pexels.com/photos/39566/banana-tropical-fruit-yellow-healthy-39566.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb`,
     stats: {
       calories: 82,
       lipids: 0.3,
@@ -54,6 +53,6 @@ export default [
       proteins: 0.5,
     },
     reductionFormula: threeForTwoFormula,
-    reductionDesc: 'three for the price of two',
+    reductionDesc: 'Three for the price of two !',
   },
 ]
