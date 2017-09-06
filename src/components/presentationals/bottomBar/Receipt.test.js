@@ -21,6 +21,7 @@ describe('Receipt component', () => {
     expect(ReceiptWrapper.find('.grocery-shop-receipt-item').length).toEqual(uniqItemId.size)
   })
   it('should display the correct item information & use callback with itemId', () => {
+    let totalPrice = 0
     ReceiptWrapper.find('.grocery-shop-receipt-item').forEach(domItem => {
       const id = parseInt(domItem.key(), 10)
       const itemIndex = props.items.findIndex(val => val.id === id)
@@ -31,6 +32,7 @@ describe('Receipt component', () => {
         return acc
       }, 0)
       const itemTotal = item.reductionFormula ? item.reductionFormula(itemQty, item.price) : itemQty * item.price
+      totalPrice += itemTotal
       expect(domItem.find('.grocery-shop-receipt-item-name').text()).toEqual(item.name)
       expect(domItem.find('.grocery-shop-receipt-item-price').text()).toEqual(item.price.toString())
       expect(domItem.find('.grocery-shop-receipt-item-quantity').text()).toEqual(itemQty.toString())
@@ -38,5 +40,6 @@ describe('Receipt component', () => {
       domItem.find('.grocery-shop-receipt-item-remove').simulate('click')
       expect(props.removeItems).toBeCalled()
     })
+    expect(ReceiptWrapper.find('.grocery-shop-receipt-total').text()).toEqual(totalPrice.toString())
   })
 })

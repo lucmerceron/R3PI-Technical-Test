@@ -5,6 +5,7 @@ import './Receipt.css'
 
 const Receipt = ({ items, cart, removeItems }) => {
   const uniqItemId = [...new Set(cart)]
+  let totalPrice = 0
 
   return (
     <ul className="grocery-shop-receipt">
@@ -17,6 +18,7 @@ const Receipt = ({ items, cart, removeItems }) => {
           return acc
         }, 0)
         const itemTotal = item.reductionFormula ? item.reductionFormula(itemQty, item.price) : itemQty * item.price
+        totalPrice += itemTotal
 
         return (
           <li key={itemId} className="grocery-shop-receipt-item">
@@ -24,10 +26,13 @@ const Receipt = ({ items, cart, removeItems }) => {
             <div className="grocery-shop-receipt-item-price">{item.price}</div>
             <div className="grocery-shop-receipt-item-quantity">{itemQty}</div>
             <div className="grocery-shop-receipt-item-total">{itemTotal}</div>
-            <div className="grocery-shop-receipt-item-remove" onClick={removeItems(itemId)} />
+            <div className="grocery-shop-receipt-item-remove" onClick={() => removeItems(itemId)} />
           </li>
         )
       })}
+      <div className="grocery-shop-receipt-total">
+        {totalPrice}
+      </div>
     </ul>
   )
 }
