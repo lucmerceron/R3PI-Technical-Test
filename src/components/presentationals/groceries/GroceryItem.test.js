@@ -6,7 +6,7 @@ import GroceryItem from './GroceryItem'
 
 describe('GroceryItem component', () => {
   const props = {
-    item: groceryItems[0],
+    item: groceryItems[3],
     quantity: 4,
     addItem: jest.fn(),
     removeItem: jest.fn(),
@@ -29,6 +29,9 @@ describe('GroceryItem component', () => {
   })
   it('should display the item quantity', () => {
     expect(GroceryItemWrapper.find('.grocery-shop-item-quantity').text()).toEqual(props.quantity.toString())
+  })
+  it('should display the item reduc', () => {
+    expect(GroceryItemWrapper.find('.grocery-shop-item-reduction').text()).toEqual(props.item.reductionDesc)
   })
   it('should display every statistics', () => {
     Object.keys(props.item.stats).forEach(stat => {

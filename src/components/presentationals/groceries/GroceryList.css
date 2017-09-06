@@ -1,0 +1,8 @@
+.grocery-shop-items {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  flex: auto;
+  margin-bottom: 76px;
+}
