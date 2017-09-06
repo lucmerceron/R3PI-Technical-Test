@@ -1,0 +1,7 @@
+.grocery-shop {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 0 1 1024px; 
+  height: 100vh;
+}
