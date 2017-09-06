@@ -29,7 +29,7 @@ const Receipt = ({ items, cart, removeItems }) => {
               onClick={() => removeItems(itemId)}
             >&#xE92B;</div>
             <div className="grocery-shop-receipt-item-name">{item.name}</div>
-            <div className="grocery-shop-receipt-item-price">{item.price}</div>
+            <div className="grocery-shop-receipt-item-price">{transformTotal(item.price)}</div>
             <div className="grocery-shop-receipt-item-quantity">x {itemQty}</div>
             <div className="grocery-shop-receipt-item-total">{transformTotal(itemTotal)}</div>
           </li>
