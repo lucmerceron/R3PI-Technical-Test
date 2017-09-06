@@ -25,3 +25,8 @@ This project was created for a Front-End Test for [R3PI](https://r3pi.io/).
 The overall architecture is solid & well tested but I learnt [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) on the spot so don't take example of the css implementation.
 
 This application is responsive and should be compatible with most modern browsers.
+
+## Know bugs
+
+The bottom bar can have a small shift to the right (from the center) when the scrollbar is visible and that the width of the screen is superior to 1024px.
+To correct it, we should detect the presence of the scrollbar, doing hacky stuff to measure its width (depends on browsers) and reduce that with a `calc` from the `translateX`.
