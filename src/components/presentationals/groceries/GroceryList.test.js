@@ -28,9 +28,23 @@ describe('GroceryList component', () => {
   it('should give each GroceryItem its correct quantity depending on cart', () => {
     GroceryListWrapper.find('GroceryItem').forEach(GroceryItem => {
       expect(GroceryItem.prop('quantity')).toEqual(props.cart.reduce((acc, itemId) => {
-        if (itemId === GroceryItem.key()) return acc + 1
+        if (itemId.toString() === GroceryItem.key()) return acc + 1
         return acc
       }, 0))
+    })
+  })
+  it('should give down add and remove item functions', () => {
+    GroceryListWrapper.find('GroceryItem').forEach(GroceryItem => {
+      expect(GroceryItem.prop('addItem')).toBeDefined()
+      expect(GroceryItem.prop('removeItem')).toBeDefined()
+    })
+  })
+  it('should call the callbacks function with correct id', () => {
+    GroceryListWrapper.find('GroceryItem').forEach(GroceryItem => {
+      GroceryItem.prop('addItem')()
+      GroceryItem.prop('removeItem')()
+      expect(props.addItem).toBeCalledWith(parseInt(GroceryItem.key(), 10))
+      expect(props.addItem).toBeCalledWith(parseInt(GroceryItem.key(), 10))
     })
   })
 })

@@ -15,8 +15,8 @@ const GroceryList = ({ items, cart, addItem, removeItem }) => (
           if (itemId === item.id) return acc + 1
           return acc
         }, 0)}
-        addItem={addItem}
-        removeItem={removeItem}
+        addItem={() => addItem(item.id)}
+        removeItem={() => removeItem(item.id)}
       />
     ))}
   </div>
