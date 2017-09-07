@@ -24,7 +24,8 @@ This project was created for a Front-End Test for [R3PI](https://r3pi.io/).
 
 The overall architecture is solid & well tested but I learnt [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) on the spot so don't take example of the css implementation.
 
-This application is responsive and should be compatible with most modern browsers.
+This application is responsive and should be compatible with most modern browsers on computer.
+The application has not been tested for mobiles.
 
 ## Know bugs
 
