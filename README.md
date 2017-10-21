@@ -1,5 +1,5 @@
-# R3PI-Technical-Test
-R3PI React home coding exercice
+# React-Technical-Test
+React home coding exercice
 
 ## Installation
 
@@ -27,7 +27,7 @@ The overall architecture is solid & well tested but I learnt [flexbox](https://d
 This application is responsive and should be compatible with most modern browsers on computer.
 The application has not been tested for mobiles.
 
-## Know bugs
+## Known bugs
 
 The bottom bar can have a small shift to the right (from the center) when the scrollbar is visible and that the width of the screen is superior to 1024px.
-To correct it, we should detect the presence of the scrollbar, doing hacky stuff to measure its width (depends on browsers) and reduce that with a `calc` from the `translateX`.
+To correct it, we should detect the presence of the scrollbar, doing hacky stuff to measure its width (as it depends on browsers) and reduce that with a `calc` from the `translateX`.
